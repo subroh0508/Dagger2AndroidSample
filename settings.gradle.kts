@@ -1,1 +1,12 @@
-include(":app")
+include(
+    ":app",
+    "ui:compose:components",
+    "ui:compose:daggerandroid",
+    "ui:compose:daggerhilt",
+    "ui:legacy:components",
+    "ui:legacy:dagger",
+    "ui:legacy:daggerandroid",
+    "ui:legacy:daggerhilt",
+    "data:model",
+    "data:repository",
+)

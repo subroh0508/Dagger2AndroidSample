@@ -1,6 +1,5 @@
 plugins {
     `android-application`
-    kotlin("android")
 }
 
 dependencies {

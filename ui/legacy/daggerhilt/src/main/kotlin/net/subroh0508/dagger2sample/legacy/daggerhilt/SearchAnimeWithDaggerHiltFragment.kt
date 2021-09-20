@@ -29,6 +29,7 @@ class SearchAnimeWithDaggerHiltFragment : Fragment(R.layout.fragment_search_anim
         super.onViewCreated(view, savedInstanceState)
 
         val animeAbstractsAdapter = AnimeAbstractsAdapter(layoutInflater, viewModel)
+
         binding.list.adapter = animeAbstractsAdapter
         binding.list.layoutManager = LinearLayoutManager(context)
 

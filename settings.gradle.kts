@@ -1,7 +1,6 @@
 include(
     ":app",
     ":basecomponents",
-    ":basehiltcomponents",
     ":ui:compose:components",
     ":ui:compose:daggerandroid",
     ":ui:compose:daggerhilt",

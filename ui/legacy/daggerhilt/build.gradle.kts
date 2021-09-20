@@ -4,7 +4,6 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":basehiltcomponents"))
     implementation(project(":ui:legacy:components"))
 
     implementation(Libraries.Dagger2.hilt)

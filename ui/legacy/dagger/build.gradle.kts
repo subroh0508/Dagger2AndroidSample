@@ -1,8 +1,10 @@
 plugins {
-    `android-library`
+    `android-ui-legacy`
 }
 
 dependencies {
-    implementation(project(":data:model"))
-    implementation(project(":data:repository"))
+    implementation(project(":ui:legacy:components"))
+
+    implementation(Libraries.Dagger2.core)
+    kapt(Libraries.Dagger2.compiler)
 }

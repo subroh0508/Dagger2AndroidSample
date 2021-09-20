@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.subroh0508.dagger2sample.legacy.daggerandroid">
     <application>
-        <activity
-            android:name=".SearchAnimeWithDaggerAndroidActivity"
-            android:exported="false"/>
+        <activity android:name=".SearchAnimeWithDaggerAndroidActivity" android:exported="false"/>
     </application>
 </manifest>

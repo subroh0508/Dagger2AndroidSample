@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import net.subroh0508.dagger2sample.databinding.ActivityMainBinding
+import net.subroh0508.dagger2sample.legacy.dagger.SearchAnimeWithDaggerActivity
 import net.subroh0508.dagger2sample.legacy.daggerandroid.SearchAnimeWithDaggerAndroidActivity
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        openLegacyDagger.setOnClickListener { }
+        openLegacyDagger.setOnClickListener { open<SearchAnimeWithDaggerActivity>() }
         openLegacyDaggerAndroid.setOnClickListener { open<SearchAnimeWithDaggerAndroidActivity>() }
         openLegacyDaggerHilt.setOnClickListener {}
         openComposeDagger.setOnClickListener {}

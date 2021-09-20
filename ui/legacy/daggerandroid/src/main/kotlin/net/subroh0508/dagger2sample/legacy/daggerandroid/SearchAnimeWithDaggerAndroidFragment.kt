@@ -1,4 +1,4 @@
-package net.subroh0508.dagger2sample.legacy.components.view
+package net.subroh0508.dagger2sample.legacy.daggerandroid
 
 import android.os.Bundle
 import android.view.View
@@ -10,12 +10,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.android.support.DaggerFragment
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import net.subroh0508.dagger2sample.legacy.components.R
 import net.subroh0508.dagger2sample.legacy.components.databinding.FragmentSearchAnimeBinding
+import net.subroh0508.dagger2sample.legacy.components.view.AnimeAbstractsAdapter
+import net.subroh0508.dagger2sample.legacy.components.view.viewBinding
 import net.subroh0508.dagger2sample.legacy.components.viewmodel.SearchAnimeViewModel
 import javax.inject.Inject
 
-abstract class AbstractSearchAnimeFragment : DaggerFragment(R.layout.fragment_search_anime) {
+class SearchAnimeWithDaggerAndroidFragment : DaggerFragment(R.layout.fragment_search_anime) {
     @Inject
     lateinit var viewModel: SearchAnimeViewModel
     @Inject
@@ -49,9 +50,8 @@ abstract class AbstractSearchAnimeFragment : DaggerFragment(R.layout.fragment_se
     companion object {
         private const val LETTER = "letter"
 
-        operator fun <T: AbstractSearchAnimeFragment> invoke(
-            letter: String,
-            constructor: () -> T,
-        ) = constructor().apply { arguments = bundleOf(LETTER to letter) }
+        operator fun invoke(letter: String) = SearchAnimeWithDaggerAndroidFragment().apply {
+            arguments = bundleOf(LETTER to letter)
+        }
     }
 }

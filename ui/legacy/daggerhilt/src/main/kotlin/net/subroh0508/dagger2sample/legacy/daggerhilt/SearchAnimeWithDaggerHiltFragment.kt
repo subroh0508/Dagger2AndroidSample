@@ -20,9 +20,6 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class SearchAnimeWithDaggerHiltFragment : Fragment(R.layout.fragment_search_anime) {
-    //@Inject
-    //lateinit var animeAbstractsAdapter: AnimeAbstractsAdapter
-
     private val viewModel: SearchAnimeViewModel by viewModels()
 
     private val binding by viewBinding(FragmentSearchAnimeBinding::bind)

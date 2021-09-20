@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Dagger2Sample</string>
+
+    <string name="open_legacy_dagger">Only Dagger(XML)</string>
+    <string name="open_legacy_dagger_android">Dagger + Android Support(XML)</string>
+    <string name="open_legacy_dagger_hilt">Dagger + Hilt(XML)</string>
+
+    <string name="open_compose_dagger">Only Dagger(Jetpack Compose)</string>
+    <string name="open_compose_dagger_android">Dagger + Android Support\n(Jetpack Compose)</string>
+    <string name="open_compose_dagger_hilt">Dagger + Hilt(Jetpack Compose)</string>
 </resources>

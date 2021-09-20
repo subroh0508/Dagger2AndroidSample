@@ -5,6 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 internal interface DBPediaApi {
-    @GET("sparql")
-    suspend fun sparql(@Query("query") query: String): DBPediaResponse
+    @GET("sparql?output=json")
+    suspend fun sparql(@Query("query", encoded = true) query: String): DBPediaResponse
 }

@@ -3,6 +3,7 @@ package net.subroh0508.dagger2sample
 import android.app.Application
 import net.subroh0508.dagger2sample.basecomponents.CoreComponentProvider
 import net.subroh0508.dagger2sample.basecomponents.di.CoreComponent
+import net.subroh0508.dagger2sample.basecomponents.di.DaggerCoreComponent
 
 class MainApplication : Application(), CoreComponentProvider {
     override lateinit var coreComponent: CoreComponent
@@ -10,6 +11,6 @@ class MainApplication : Application(), CoreComponentProvider {
     override fun onCreate() {
         super.onCreate()
 
-        coreComponent
+        coreComponent = DaggerCoreComponent.factory().create()
     }
 }

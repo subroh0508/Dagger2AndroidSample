@@ -11,6 +11,7 @@ androidBaseExt()
 android { viewBinding.isEnabled = true }
 
 dependencies {
+    implementation(project(":basecomponents"))
     implementation(project(":data:model"))
     implementation(project(":data:repository"))
 

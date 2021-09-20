@@ -17,4 +17,6 @@ android {
             excludes.add("META-INF/*")
         }
     }
+
+    viewBinding.isEnabled = true
 }

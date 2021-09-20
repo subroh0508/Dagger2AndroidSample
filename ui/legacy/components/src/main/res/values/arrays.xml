@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name ="letters">
+        <item>あ</item>
+        <item>い</item>
+        <item>う</item>
+        <item>え</item>
+        <item>お</item>
+        <item>か</item>
+        <item>き</item>
+        <item>く</item>
+        <item>け</item>
+        <item>こ</item>
+        <item>さ</item>
+        <item>し</item>
+        <item>す</item>
+        <item>せ</item>
+        <item>そ</item>
+        <item>た</item>
+        <item>ち</item>
+        <item>つ</item>
+        <item>て</item>
+        <item>と</item>
+        <item>な</item>
+        <item>に</item>
+        <item>ぬ</item>
+        <item>ね</item>
+        <item>の</item>
+        <item>は</item>
+        <item>ひ</item>
+        <item>ふ</item>
+        <item>へ</item>
+        <item>ほ</item>
+        <item>ま</item>
+        <item>み</item>
+        <item>む</item>
+        <item>め</item>
+        <item>も</item>
+        <item>や</item>
+        <item>ゆ</item>
+        <item>よ</item>
+        <item>め</item>
+        <item>も</item>
+        <item>ら</item>
+        <item>り</item>
+        <item>る</item>
+        <item>れ</item>
+        <item>ろ</item>
+        <item>わ</item>
+        <item>を</item>
+        <item>ん</item>
+    </string-array>
+</resources>

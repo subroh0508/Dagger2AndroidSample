@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:padding="16dp"
+            tools:text="THE IDOLM@STER (アニメ)"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider"/>
+
+        <TextView
+            android:id="@+id/abstract_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:padding="16dp"
+            tools:text="『THE IDOLM@STER』（Idolmaster / アイドルマスター）は、A-1 Pictures制作の日本のアニメ。バンダイナムコゲームス（現：バンダイナムコエンターテインメント）が発売した同名のコンピューターゲーム「アイドルマスターシリーズ」を原作としたアニメ化作品。テレビアニメが2011年7月より同年12月までTBSテレビほかで全25話が放送され、特別編1話が映像ソフト収録作品の先行放送としてBS-TBSで放送された。2014年1月25日には映画『THE IDOLM@STER MOVIE 輝きの向こう側へ!』が公開された。"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/link_wikipedia"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:padding="8dp"
+            android:text="@string/link_wikipedia"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

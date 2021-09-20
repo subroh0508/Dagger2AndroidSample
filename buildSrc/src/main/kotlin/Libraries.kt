@@ -26,6 +26,9 @@ object Libraries {
         private const val materialVersion = "1.3.0"
         const val material = "com.google.android.material:material:$materialVersion"
 
+        private const val cardViewVersion = "1.0.0"
+        const val cardView = "androidx.cardview:cardview:$cardViewVersion"
+
         private const val constraintLayoutVersion = "2.1.0"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
 
@@ -44,6 +47,7 @@ object Libraries {
         object Lifecycle {
             private const val version = "2.3.0"
 
+            const val commonJvm = "androidx.lifecycle:lifecycle-common-java8:$version"
             const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$version"
         }
     }
@@ -75,6 +79,7 @@ object Libraries {
         private const val version = "2.38.1"
         const val core = "com.google.dagger:dagger:$version"
         const val android = "com.google.dagger:dagger-android:$version"
+        const val androidSupport = "com.google.dagger:dagger-android-support:$version"
         const val compiler = "com.google.dagger:dagger-compiler:$version"
         const val androidProcessor = "com.google.dagger:dagger-android-processor:$version"
         const val hilt = "com.google.dagger:hilt-android:$version"

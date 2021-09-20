@@ -6,6 +6,7 @@ import android.os.Bundle
 import net.subroh0508.dagger2sample.databinding.ActivityMainBinding
 import net.subroh0508.dagger2sample.legacy.dagger.SearchAnimeWithDaggerActivity
 import net.subroh0508.dagger2sample.legacy.daggerandroid.SearchAnimeWithDaggerAndroidActivity
+import net.subroh0508.dagger2sample.legacy.daggerhilt.SearchAnimeWithDaggerHiltActivity
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         openLegacyDagger.setOnClickListener { open<SearchAnimeWithDaggerActivity>() }
         openLegacyDaggerAndroid.setOnClickListener { open<SearchAnimeWithDaggerAndroidActivity>() }
-        openLegacyDaggerHilt.setOnClickListener {}
+        openLegacyDaggerHilt.setOnClickListener { open<SearchAnimeWithDaggerHiltActivity>() }
         openComposeDagger.setOnClickListener {}
         openComposeDaggerAndroid.setOnClickListener {}
         openComposeDaggerHilt.setOnClickListener {}

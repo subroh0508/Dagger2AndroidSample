@@ -5,8 +5,7 @@ import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 import net.subroh0508.dagger2sample.legacy.components.di.ActivityScope
 import net.subroh0508.dagger2sample.legacy.components.di.FragmentScope
-import net.subroh0508.dagger2sample.legacy.components.view.SearchAnimeFragmentAdapter
-import net.subroh0508.dagger2sample.legacy.daggerandroid.SearchAnimeWithDaggerAndroidActivity
+import net.subroh0508.dagger2sample.legacy.components.view.SearchAnimeFragmentAdapter_Factory
 import net.subroh0508.dagger2sample.legacy.daggerandroid.SearchAnimeWithDaggerAndroidFragment
 
 @Module
@@ -18,11 +17,17 @@ abstract class SearchAnimeWithDaggerAndroidActivityModule {
     companion object {
         @ActivityScope
         @Provides
+        fun provideSearchAnimeFragmentAdapterAssistedFactory(): SearchAnimeFragmentAdapter_Factory = SearchAnimeFragmentAdapter_Factory.create()
+
+        /*
+        @ActivityScope
+        @Provides
         fun provideSearchAnimeFragmentAdapter(
-            activity: SearchAnimeWithDaggerAndroidActivity
+            activity: SearchAnimeWithDaggerActivity
         ) = SearchAnimeFragmentAdapter(
             activity,
             activity.letters,
-        ) { index -> SearchAnimeWithDaggerAndroidFragment(activity.letters[index]) }
+        ) { index -> SearchAnimeWithDaggerFragment(activity.letters[index]) }
+        */
     }
 }

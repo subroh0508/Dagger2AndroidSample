@@ -3,14 +3,17 @@ package net.subroh0508.dagger2sample.legacy.components.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import net.subroh0508.dagger2sample.legacy.components.model.LoadState
 import net.subroh0508.dagger2sample.legacy.components.model.SearchAnimeUiModel
 import net.subroh0508.dagger2sample.repository.AnimeRepository
+import javax.inject.Inject
 
-class SearchAnimeViewModel(
+@HiltViewModel
+class SearchAnimeViewModel @Inject constructor(
     private val repository: AnimeRepository,
 ) : ViewModel() {
     private val animeLoadState: MutableStateFlow<LoadState> by lazy { MutableStateFlow(LoadState.Initialize) }

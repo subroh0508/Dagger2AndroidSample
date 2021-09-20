@@ -11,7 +11,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class SearchAnimeWithDaggerHiltActivity : AppCompatActivity(R.layout.activity_search_anime) {
     @Inject
-    lateinit var fragmentAdapter: SearchAnimeFragmentAdapter
+    lateinit var fragmentAdapterAssistedFactory: SearchAnimeFragmentAdapter.Factory
 
     private val binding by lazy { ActivitySearchAnimeBinding.inflate(layoutInflater) }
 
@@ -19,11 +19,14 @@ class SearchAnimeWithDaggerHiltActivity : AppCompatActivity(R.layout.activity_se
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        binding.viewPager.adapter = fragmentAdapter
+        binding.viewPager.adapter = fragmentAdapterAssistedFactory.create(
+            this, letters
+        ) { index -> SearchAnimeWithDaggerHiltFragment(letters[index]) }
+
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             tab.text = letters[position]
         }.attach()
     }
 
-    internal val letters: List<String> by lazy { resources.getStringArray(R.array.letters).toList() }
+    private val letters: List<String> by lazy { resources.getStringArray(R.array.letters).toList() }
 }

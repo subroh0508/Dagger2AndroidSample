@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,10 +20,10 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class SearchAnimeWithDaggerHiltFragment : Fragment(R.layout.fragment_search_anime) {
-    @Inject
-    lateinit var viewModel: SearchAnimeViewModel
-    @Inject
-    lateinit var animeAbstractsAdapter: AnimeAbstractsAdapter
+    //@Inject
+    //lateinit var animeAbstractsAdapter: AnimeAbstractsAdapter
+
+    private val viewModel: SearchAnimeViewModel by viewModels()
 
     private val binding by viewBinding(FragmentSearchAnimeBinding::bind)
     private val letter: String by lazy { requireArguments().getString(LETTER) ?: throw IllegalArgumentException() }
@@ -30,6 +31,7 @@ class SearchAnimeWithDaggerHiltFragment : Fragment(R.layout.fragment_search_anim
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val animeAbstractsAdapter = AnimeAbstractsAdapter(layoutInflater, viewModel)
         binding.list.adapter = animeAbstractsAdapter
         binding.list.layoutManager = LinearLayoutManager(context)
 
